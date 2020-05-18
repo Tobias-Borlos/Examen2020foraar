@@ -1,0 +1,88 @@
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.wrap{
+height: 100%;}
+
+.wrap::before{
+
+    color: black;
+    font-size: 600%;
+    content: 'well we got honest fares';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.text1::before{
+    animation: textSwitch 2s forwards;
+    animation-iteration-count: 1;
+   
+}
+.text2::before{
+    animation: textSwitch2 2s forwards;
+}
+.textBack::before{
+    animation: textSwitchBack 2s forwards ;
+}
+
+
+@keyframes textSwitch{
+
+    0%{
+        opacity: 1;
+        transform: translateX(0vw);
+        content: 'well we got honest fares';
+    }
+    50%{
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    100%{
+        opacity: 1;
+        content: 'well we got WOW World';
+        transform: translateX(0vw);
+    }
+
+}
+@keyframes textSwitch2{
+
+    0%{
+        opacity: 1;
+        transform: translateX(0vw);
+        content: 'well we got WOW World';
+    }
+    50%{
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    100%{
+        opacity: 1;
+        content: 'well we got ton of money';
+        transform: translateX(0vw);
+    }
+
+}
+
+@keyframes textSwitchBack{
+
+    0%{
+        opacity: 1;
+        transform: translateX(0vw);
+        content: 'well we got ton of money';
+    }
+    50%{
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    100%{
+        opacity: 1;
+        content: 'well we got honest fares';
+        transform: translateX(0vw);
+    }
+
+}
+
+  
