@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swipe test</title>
+    <style>
+        .page1 {
+            position: absolute;
+            top: 0;
+            left: 0; 
+            width: 100vw;
+            height: 100vh;
+            background-color: red;
+        }
+
+        .page2 {
+            position: absolute;
+            top: 0;
+            left: 100%; 
+            width: 100vw;
+            height: 100vh;
+            background-color: yellow;
+            display: none;
+        }
+
+
+        .center {
+            font-size: 300%;
+            position: absolute; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="page1" id="page1" 
+    ontouchstart="page1handleTouchStart(event)"
+    ontouchmove="page1handleTouchMove(event)"
+    ontouchend="page1handleTouchEnd(event)">
+        <p class="center">Page 1</p>
+    </div>
+    
+    <div class="page2" id="page2" 
+    ontouchstart="page2handleTouchStart(event)"
+    ontouchmove="page2handleTouchMove(event)"
+    ontouchend="page2handleTouchEnd(event)">
+
+    <p class="center">Page 2</p>
+    </div>
+
+</body>
+
+<script>
+    let page1 = document.querySelector('#page1')
+    let page2 = document.querySelector('#page2')
+
+    let startingX; 
+
+/* Finds the horisontal cordinates for the touching point */
+    function page1handleTouchStart(event) {
+        startingX = event.touches[0].clientX;
+    }
+
+/* controlls both pages */
+    function page1handleTouchMove(event) {
+        var touch = event.touches[0]
+        /* change the value of starting point to where the touch is going */
+        var change = startingX - touch.clientX
+
+
+        if (change < 0) {
+            return;
+        }
+
+        /* calculates the touchpoint and reducing the left value */
+        page1.style.left = '-' + change + 'px'
+
+        /* Shows the page 2, as you scroll it onto the display */
+        page2.style.display = 'block'
+
+        /* shows the page a little bit of the time */
+        page2.style.left = (screen.width - change) + 'px'
+        event.preventDefault()
+    }
+    /* if you are not swiping enough, it resets the page */
+    function page1handleTouchEnd(event) {
+        let change = startingX - event.changedTouches[0].clientX
+
+        /* the third of the screensize */
+        let leftover = screen.width / 3 
+        /* if the screen is dragged less than 1/3 of the page, it goes back to page 1
+            If it is over, then page 2 */
+        if (change < leftover) {
+        page1.style.left = 0;
+        page1.style.left = '100%';
+        page2.style.display = 'none';
+        } else {
+            page1.style.transition = 'all .3s';
+            page2.style.transition = 'all .3s';
+            page1.style.left = '-100%';
+            page2.style.left = 0;
+            page2.style.display = 'block'
+        }
+    }
+    /* removes the page 1, when page 2 is shown */
+    function page2handleTouchStart(event) {
+        startingX = event.touches[0].clientX;
+        page1.style.transition = '';
+        page2.style.transition = ''; 
+        page1.style.display = "none";
+    }
+
+    function page2handleTouchMove(event) {
+        let = touch = event.touches[0]
+        let = change = touch.clientX - startingX;
+        if (change < 0) {
+            return;
+        }
+        page1.style.display = "block"
+        page1.style.left = (change - screen.width) + "px"
+        page2.style.left = change + "px";
+        event.preventDefault();
+    }
+
+    function page2handleTouchEnd(event) {
+
+        let change = event.changedTouches[0].clientX - startingX
+        let leftover = screen.width / 4 
+        if (change < leftover) {
+        page1.style.left = "-100%";
+        page1.style.display = "none";
+        page2.style.left = '0';
+        } else {
+            page1.style.transition = 'all .3s';
+            page2.style.transition = 'all .3s';
+            page1.style.left = 0;
+            page2.style.left = '100%'
+        }
+    }
+</script>
+
+</html>
