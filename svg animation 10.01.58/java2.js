@@ -4,6 +4,9 @@ var downloadTimer = setInterval(function(){
     clearInterval(downloadTimer);
     document.querySelector('.animation').classList.add('coinFlip')
     console.log('class has been added')
+
+    
+
   }
   timeleft -= 1;
 }, 1000);

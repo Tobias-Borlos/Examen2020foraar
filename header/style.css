@@ -17,15 +17,15 @@ height: 100%;}
 }
 
 .text1::before{
-    animation: textSwitch 2s forwards;
+    animation: textSwitch 2.5s forwards ease-in;
     animation-iteration-count: 1;
    
 }
 .text2::before{
-    animation: textSwitch2 2s forwards;
+    animation: textSwitch2 2.5s forwards ease-in;
 }
 .textBack::before{
-    animation: textSwitchBack 2s forwards ;
+    animation: textSwitchBack 2.5s forwards ease-in ;
 }
 
 
