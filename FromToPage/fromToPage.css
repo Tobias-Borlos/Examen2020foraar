@@ -1,0 +1,119 @@
+.fromToPage__from, .fromToPage__to, .fromToPage__date__outbound, .fromToPage__date__return {
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+} 
+
+/* from/to boxes */
+.fromToPage__fromText, .fromToPage__toText {
+    margin-left: 10px;
+}
+
+.fromToPage__fromText p, .fromToPage__toText p{
+    margin-bottom: 2px;
+}
+
+.fromToPage__fromText input, .fromToPage__toText input{
+margin-bottom: 1em;
+}
+
+#myinput, #myinput2{
+    border: none;   
+}
+
+.fromToPage__from, .fromToPage__to {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+}
+
+.dropdownContent2 {
+    display: none;
+    position: absolute;
+}
+
+/* shift button */
+.shift {
+    left: 25vw;
+    top: 9vh;
+}
+
+.shift {
+    position: absolute;
+}
+
+.fromToPage img, .fromToPage__date img {
+    margin: auto auto;
+}
+
+/* To seperation between all steps */
+.fromToPage, .fromToPage__date, .fromToPage__lastStep {
+    margin-bottom: 50px;
+}
+
+/* to seperate between from/to and outbound/return */
+.fromToPage__from, .fromToPage__date__outbound {
+    margin-bottom: 3px;
+}
+
+.fromToPage__lastStep {
+    grid-template-columns: 1fr 1fr;
+}
+
+.fromToPage__lastStep__selection1, .fromToPage__lastStep__selection2{
+    
+    text-align: center;
+}
+
+#Roundbound, #HowMany {
+    padding: 18%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    width: 177px;
+}
+
+.holepage {
+    max-width: 357.91px;
+}
+
+/* Datepicker */
+.datepicker {
+    border: none;
+    background: white;
+}
+
+.fromToPage__date__outbound, .fromToPage__date__return {
+    border: 1px solid rgba(0, 0, 0, 0.15); 
+}
+
+.fromToPage__date__outbound img, .fromToPage__date__return img {
+    width: 40px;
+    height: 40px;
+}
+
+.fromToPage__date, .fromToPage__lastStep {
+    display: none;
+}
+
+.ui-datepicker {
+    background-color: white;
+}
+
+
+/* search button */
+.search {
+    display: none; 
+}
+
+.search__searchButton {
+    display: block;
+    background-color: 93DEFE;
+    border: none;
+    width: 220px;
+    height: 62px;
+    border-radius: 25px;
+    margin: 0 auto
+}
+
