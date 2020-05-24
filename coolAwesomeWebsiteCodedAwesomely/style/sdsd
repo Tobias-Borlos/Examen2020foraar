@@ -1,0 +1,84 @@
+@function clr($base, $shade: bg) {
+    $color: map-get(map-get($colors, $base), $shade);
+@return $color
+}
+
+
+// sasd
+*{
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    position: relative;
+    height: 100%;
+  }
+  body {
+    background: rgb(36, 36, 36);
+    display: grid;
+    grid-template-rows: 90% 10%;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+
+    &--image{
+        width: 100%;
+        z-index: -2;
+    }
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide .bg-image{
+    height: 100%;
+    width: 100%;
+  }
+    
+  section.swiper-button-next, section.swiper-button-prev{
+      //display: none;
+      color: red($color: #000000);
+  }
+
+ .navbar--wrapper{
+    width: 100%;
+    height: 10vh;
+
+    grid-column: 1;
+    grid-row: 2;
+
+ }
+
+.navbar{
+
+    display: flex;
+    grid-column: 1;
+    grid-row: 2;
+
+ &--burgerIcon{
+    top: 0;
+    font-size: 2em;
+   
+    color: #bb2233;
+    z-index: +2;
+  }
+}
+

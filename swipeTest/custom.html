@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="custom.css">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+</head>
+<body>
+    <!-- swiperjs.com has been used to help us build this swiper-->
+    <section class="swiper-container">
+        <section class="swiper-wrapper">
+            <section class="swiper-slide">
+                <img class="bg-image" src="billeder/drinks.jpg" alt="">
+            </section>
+
+            <section class="swiper-slide">
+
+                <img class="bg-image" src="billeder/jj.jpg" alt="">
+            </section>
+
+            <section class="swiper-slide">
+
+                <img class="bg-image" src="billeder/cattabolt.jpg" alt="">
+            </section>
+
+            <section class="swiper-slide">
+            
+                <img class="bg-image" src="billeder/goingplaces.jpg" alt="">
+            </section>
+        </section>
+        <section class="swiper-pagination"></section>
+        <section class="swiper-button-next"></section>
+        <section class="swiper-button-prev"></section>
+
+
+
+
+
+        <!-- some premade javascript from swiperjs.com-->
+        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+        <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          });
+        </script>
+    </body>
+
+</html>
