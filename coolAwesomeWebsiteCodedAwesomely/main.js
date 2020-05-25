@@ -29,7 +29,7 @@ function openBurgerMenu(){
 }
 
 function openFromTo(){
-    document.querySelector('.holepage').style.display = 'grid'
+    document.querySelector('.holepage').style.display = 'block'
 
     document.querySelector('.navbar').style.bottom = '70vh'
 }
