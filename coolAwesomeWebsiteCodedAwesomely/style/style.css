@@ -182,6 +182,7 @@ section.swiper-button-next, section.swiper-button-prev {
 }
 
 /* from/to boxes */
+
 .fromToPage__fromText, .fromToPage__toText {
   margin-left: 10px;
   margin-top: 1em;
@@ -236,13 +237,17 @@ section.swiper-button-next, section.swiper-button-prev {
   margin: auto auto;
 }
 
-/* To seperation between all steps */
+/* To seperation between all steps and to make room on both sides */
 .fromToPage, .fromToPage__date{
   margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .fromToPage__lastStep {
-margin-bottom: 25px;
+  margin-bottom: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* to seperate between from/to and outbound/return */
