@@ -29,16 +29,16 @@
     <section class="swiper-container">
         <section class="swiper-wrapper">
             <section class="swiper-slide">
-                <img class="swiper-container--image" onclick="closeAll()" src="billeder/FlightCall.jpg" alt="">
+                <img class="swiper-container--image" onclick="closeAll()" src="billeder/girl and plane.gif" alt="">
             </section>
             <section class="swiper-slide">
-                <img class="swiper-container--image" onclick="closeAll()" src="billeder/CliffOfAdventure.jpg" alt="">
+                <img class="swiper-container--image" onclick="closeAll()" src="billeder/mountain backpacker.gif" alt="">
             </section>
             <section class="swiper-slide">
                 <img class="swiper-container--image" onclick="closeAll()" src="billeder/riverBagground.jpg" alt="">
             </section>
             <section class="swiper-slide">
-                <img class="swiper-container--image" onclick="closeAll()" src="billeder/travelToDoom.jpg" alt="">
+                <img class="swiper-container--image" onclick="closeAll()" src="billeder/cloud movement.gif" alt="">
             </section>
 
         </section>
@@ -125,7 +125,11 @@
             <section class="fromToPage">
             
                 <section class="fromToPage__from">
-            
+
+                    <div class="shift" onclick="swapValues()">
+                        <img id="shiftImg" src="images/shift.png" alt="arrow shift">
+                    </div>
+
                     <section class="fromToPage__fromText">
                         <p>From</p>
                         <div class="dropdown">
@@ -140,9 +144,6 @@
             
                 </section>
             
-                <div class="shift" onclick="swapValues()">
-                    <img src="images/shift.png" alt="arrow shift">
-                </div>
             
                 <section class="fromToPage__to">
             
@@ -199,7 +200,7 @@
             
             
                 <section onclick="showSearch()" class="fromToPage__lastStep__selection2">
-                    <select id="Howmany">
+                    <select id="HowMany">
                         <option value="How many">How many?</option>
                         <option class="options" value="1">1</option>
                         <option class="options" value="2">2</option>
@@ -213,7 +214,7 @@
             </section>
             
             <section class="search">
-            <button class="search__searchButton">Search</button>
+            <button class="search__searchButton" onclick="location.href='main.html';">Search</button>
             </section>
             
             </section>

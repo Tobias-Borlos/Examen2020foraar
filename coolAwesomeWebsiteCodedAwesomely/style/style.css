@@ -189,8 +189,15 @@ section.swiper-button-next, section.swiper-button-prev {
 }
 
 /* from/to boxes */
+
 .fromToPage__fromText, .fromToPage__toText {
   margin-left: 10px;
+  margin-top: 1em;
+}
+
+.fromToPage__fromText {
+  grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
 .fromToPage__fromText p, .fromToPage__toText p {
@@ -199,9 +206,10 @@ section.swiper-button-next, section.swiper-button-prev {
 
 .fromToPage__fromText input, .fromToPage__toText input {
   margin-bottom: 1em;
+  font-size: 18px;
 }
 
-#myinput, #myinput2 {
+#myInput, #myInput2 {
   border: none;
 }
 
@@ -221,21 +229,32 @@ section.swiper-button-next, section.swiper-button-prev {
 
 /* shift button */
 .shift {
-  left: 25vw;
-  top: 9vh;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
 }
 
-.shift {
-  position: absolute;
+#shiftImg {
+  margin: 0;
+  margin-left: 275px;
+  margin-bottom: -77px;
+  position: relative;
 }
 
 .fromToPage img, .fromToPage__date img {
   margin: auto auto;
 }
 
-/* To seperation between all steps */
-.fromToPage, .fromToPage__date, .fromToPage__lastStep {
-  margin-bottom: 50px;
+/* To seperation between all steps and to make room on both sides */
+.fromToPage, .fromToPage__date{
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.fromToPage__lastStep {
+  margin-bottom: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* to seperate between from/to and outbound/return */
@@ -262,10 +281,11 @@ section.swiper-button-next, section.swiper-button-prev {
 .holepage {
   display: none;
   max-width: 357.91px;
+  position: fixed;
   bottom: 0;
   height: 70vh;
-  width: 100%;
-  padding: 10px;
+  width: 100vw;
+  padding-top: 10px;
   background-color: white;
 }
 
@@ -273,10 +293,21 @@ section.swiper-button-next, section.swiper-button-prev {
 .datepicker {
   border: none;
   background: white;
+  font-size: 18px;
 }
 
 .fromToPage__date__outbound, .fromToPage__date__return {
   border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+
+.fromToPage__date__outboundText, .fromToPage__date__returnText {
+margin-top: 1em;
+margin-left: 10px;
+}
+
+.datepicker {
+  margin-bottom: 1em;
 }
 
 .fromToPage__date__outbound img, .fromToPage__date__return img {
@@ -299,7 +330,7 @@ section.swiper-button-next, section.swiper-button-prev {
 
 .search__searchButton {
   display: block;
-  background-color: 93DEFE;
+  background-color: #93DEFE;
   border: none;
   width: 220px;
   height: 62px;
