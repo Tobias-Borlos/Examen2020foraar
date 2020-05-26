@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/movingText.css">
     <script src="https://kit.fontawesome.com/0eb1370423.js" crossorigin="anonymous"></script>
 
   <!-- Link Swiper's CSS -->
@@ -27,17 +28,21 @@
  
     <!-- swiperjs.com has been used to help us build this swiper-->
     <section class="swiper-container">
-        <section class="swiper-wrapper">
+        <section class="swiper-wrapper" >
             <section class="swiper-slide">
+                <h2 class="swiper--title">Honest Fares</h2>
                 <img class="swiper-container--image" onclick="closeAll()" src="billeder/girl and plane.gif" alt="">
             </section>
             <section class="swiper-slide">
+                <section class="wrap"></section>
                 <img class="swiper-container--image" onclick="closeAll()" src="billeder/mountain backpacker.gif" alt="">
             </section>
             <section class="swiper-slide">
+                <h2 class="swiper--title swiper--title-active">Resonable travel</h2>
                 <img class="swiper-container--image" onclick="closeAll()" src="billeder/riverBagground.jpg" alt="">
             </section>
             <section class="swiper-slide">
+                <h2 class="swiper--title ">Fly to your Jurney</h2>
                 <img class="swiper-container--image" onclick="closeAll()" src="billeder/cloud movement.gif" alt="">
             </section>
 
@@ -47,9 +52,12 @@
 
   <!-- progresbar ses nederst på siden -->
   <section class="navbar">
-        <svg class="navbar--svg"  viewBox="0 0 421 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path id="navbar--svg" fill-rule="evenodd" clip-rule="evenodd" d="M144.762 0C157.88 3.13701 166.784 6.34268 166.974 7.5C170.368 28.1963 188.563 44 210.5 44C231.808 44 249.586 29.089 253.698 9.26677C253.819 8.68203 253.929 8.09302 254.026 7.5C254.216 6.34268 263.12 3.13701 276.238 0H421V69H0V0H144.762Z" fill="white"/>
-                </svg>
+
+    <svg class="navbar--svg"  viewBox="0 0 375 62"  xmlns="http://www.w3.org/2000/svg">
+        <path id="navbar--svg" fill-rule="evenodd" clip-rule="evenodd" d="M128.945 0C140.623 3.2137 148.552 6.49772 148.73 7.68561L148.73 7.68755C151.753 28.9012 167.96 45.1 187.5 45.1C206.48 45.1 222.316 29.8163 225.978 9.49849C226.086 8.89913 226.183 8.2954 226.27 7.68755C226.439 6.5013 234.371 3.21545 246.055 0H375V82H0V0H128.945Z" fill="white"/>
+        </svg>
+        
+                    
                 
         
     <section class="navbar--wrapper">
@@ -242,6 +250,7 @@
         </script>
 
         <script src="main.js"></script>
+        <script src="movingText.js"></script>
     </body>
 
 </html>

@@ -43,7 +43,22 @@ function closeAll(){
     console.log('close')
 }
 
+/* window.addEventListener('resize', function(){
+  scaleNavbar()
+})
 
+window.addEventListener('load', function(){
+  scaleNavbar()
+})
+
+function scaleNavbar(){
+  let navbar = document.querySelector('.navbar--svg')
+  let procentheight = window.innerHeight/10
+  let procentwidth = window.innerWidth
+  console.log(procentheight)
+  console.log(procentwidth)
+  //navbar.setAttribute("viewBox", "0 0 " + procentwidth + " " + procentheight);
+  } */
 
 //from too js
 
