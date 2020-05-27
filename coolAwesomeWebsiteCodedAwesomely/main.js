@@ -50,7 +50,6 @@ function openFromTo(){
 function closeMenu(){
   document.querySelector('.burgerMenu').style.display = 'none'
   document.querySelector('.logo').style.display = "block"
-
 }
 
 function closeAll(){
@@ -111,6 +110,9 @@ function dropDownMenu2() {
     let input = document.querySelector(".text")
     input.textContent += "This just got added";
 } */
+
+/* autocomplete function from 
+https://www.w3schools.com/howto/howto_js_autocomplete.asp */
 
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
