@@ -32,13 +32,13 @@ body {
 
 .navbar__active {
   animation-name: navUp;
-  animation-duration: .6s;
+  animation-duration: .8s;
   animation-fill-mode: forwards;
 }
 
 .navbar--svg {
   position: absolute;
-  z-index: -2;
+  z-index: 3;
   width: 100%;
   height: 100%;
 }
@@ -53,11 +53,15 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  z-index: 4;
+  
 }
 
 .navbar--flyWrap {
-  margin-bottom: 5vh;
-  margin-top: -5vh;
+  margin-bottom: 3vh;
+  margin-top: -3vh;
+  z-index: 4;
+ 
 }
 
 .navbar--flyIcon {
@@ -66,22 +70,28 @@ body {
 
 #image0 {
   opacity: 50%;
+
 }
 
 .navbar--burgerIcon {
   font-size: 2em;
   background-color: white;
     border: none;
+    z-index: 4;
 }
 
 .fas {
   color: #A835AD;
   width: 45px;
 }
+.navbar--icon{
+  z-index: 4;
+}
 
 .navbar--icon img{
   height: 45px;
   width: 45px;
+  
 }
 
 section.swiper-button-next, section.swiper-button-prev {
@@ -123,6 +133,7 @@ section.swiper-button-next, section.swiper-button-prev {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: -3;
 }
 
 @keyframes from {
@@ -140,54 +151,57 @@ section.swiper-button-next, section.swiper-button-prev {
   display: none;
   background-color: white;
   width: 100%;
-  z-index: +3;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
+  z-index: +4;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+ 
+          justify-content: space-between;
 }
 
-.chatBot--rightWrapper {
+#chat{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  margin-right: 10px;
+  flex-direction: column;
+  height: 50vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr ;
+  grid-gap: 1vh;
 }
 
-.chatBot--rightMesseges {
-  height: 7vh;
+
+ 
+.chat-wrap {
   width: 80%;
   background-color: white;
   border-radius: 20px;
   padding: 15px;
   color: black;
   border: solid 0.5px rgba(0, 0, 0, 0.5);
-  -ms-grid-column-align: right;
-      justify-self: right;
+  justify-self: left;
 }
 
-.chatBot--leftWrapper {
-  margin-left: 10px;
-}
 
-.chatBot--leftMesseges {
+
+.chat-answer-select {
   height: 7vh;
   width: 80%;
   background-color: #93DEFE;
   border-radius: 20px;
   padding: 15px;
   color: black;
+  justify-self: right;
+  display: block;
+
 }
+
+.chat-answer-select :first-child{
+display: block;
+}
+
+.chat-answer{
+  padding-bottom: 10px;
+}
+
 
 .chatBot--messegesWrapper {
   border: solid 1px black;
@@ -197,6 +211,8 @@ section.swiper-button-next, section.swiper-button-prev {
   display: -ms-flexbox;
   display: flex;
   padding: 5px;
+  position: relative;
+  bottom: 0;
 }
 
 .chatBot--messegesBar {
@@ -227,6 +243,7 @@ section.swiper-button-next, section.swiper-button-prev {
   border-left: none;
   background-color: white;
   font-size: 26px;
+  z-index: 100;
 }
 
 .burgerMenu--list {
@@ -368,6 +385,7 @@ section.swiper-button-next, section.swiper-button-prev {
   padding-top: 10px;
   background-color: white;
   overflow-y: auto;
+  z-index: +4;
 }
 
 
@@ -426,3 +444,14 @@ margin-left: 10px;
   margin-bottom: 10%;
 }
 /*# sourceMappingURL=style.css.map */
+
+.body--mask{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.466);
+  z-index: 2;
+  display: none;
+}

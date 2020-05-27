@@ -1,6 +1,6 @@
-let chat = document.querySelector('.navbar--icon')
+let chatBot = document.querySelector('.navbar--icon')
 
-chat.addEventListener('click', function(){
+chatBot.addEventListener('click', function(){
     openChatBot()
 })
 
@@ -31,6 +31,8 @@ function openChatBot(){
 
 function openBurgerMenu(){
     document.querySelector('.burgerMenu').style.display = 'block'
+    document.querySelector('.body--mask').style.display = 'block'
+
 }
 
 function openFromTo(){
@@ -48,6 +50,7 @@ function closeMenu(){
 function closeAll(){
     document.querySelector('.chatBot').style.display = 'none'
     document.querySelector('.holepage').style.display = 'none'
+    document.querySelector('.body--mask').style.display = 'none'
     /* document.querySelector('.navbar').style.bottom = '0vh' */
 
     let nav = document.querySelector('.navbar')
