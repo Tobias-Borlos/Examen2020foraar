@@ -16,6 +16,22 @@ body {
   height: 100vh;
 }
 
+@keyframes logoShow {
+  0% {left: -100px; width: 100px; opacity: 0%;}
+  100% {left: 0; width: 65px; opacity: 100%;}
+}
+
+
+.logo {
+  animation-name: logoShow;
+  animation-duration: 1;
+  width: 10vh; 
+  position: fixed;
+  z-index: +2;
+  margin: 10px;
+  opacity: 0.5;
+}
+
 .navbar {
   position: fixed;
   bottom: 0;
@@ -232,7 +248,7 @@ display: block;
 
 .burgerMenu {
   animation-name: menu;
-  animation-duration: .4s;
+  animation-duration: .5s;
   animation-fill-mode: forwards;
   display: none;
   position: absolute;
@@ -244,6 +260,8 @@ display: block;
   background-color: white;
   font-size: 26px;
   z-index: 100;
+  color: white;
+  font-size: 23px;
 }
 
 .burgerMenu--list {
@@ -262,6 +280,8 @@ display: block;
       -ms-flex-direction: column;
           flex-direction: column;
   justify-content: space-evenly;
+  margin-top: 25%;
+  background-color: #a62998;
 }
 
 .burgerMenu--list li {
