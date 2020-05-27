@@ -1,6 +1,7 @@
 let chatBot = document.querySelector('.navbar--icon')
 
 chatBot.addEventListener('click', function(){
+  closeAll()
     openChatBot()
 })
 
@@ -15,7 +16,9 @@ burger.addEventListener('click', function(){
 
 let flight = document.querySelector('#navbar--flyIcon')
 flight.addEventListener('click', function(){
-    openFromTo()
+  closeAll()  
+  openFromTo()
+
 })
 
 function openChatBot(){
