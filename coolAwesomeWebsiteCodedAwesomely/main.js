@@ -32,6 +32,7 @@ function openChatBot(){
 function openBurgerMenu(){
     document.querySelector('.burgerMenu').style.display = 'block'
     document.querySelector('.body--mask').style.display = 'block'
+    document.querySelector('.logo').style.display = "none"
 
 }
 
@@ -45,12 +46,16 @@ function openFromTo(){
 
 function closeMenu(){
   document.querySelector('.burgerMenu').style.display = 'none'
+  document.querySelector('.logo').style.display = "block"
+
 }
 
 function closeAll(){
     document.querySelector('.chatBot').style.display = 'none'
     document.querySelector('.holepage').style.display = 'none'
     document.querySelector('.body--mask').style.display = 'none'
+
+    document.querySelector('.logo').style.display = "block"
     /* document.querySelector('.navbar').style.bottom = '0vh' */
 
     let nav = document.querySelector('.navbar')
