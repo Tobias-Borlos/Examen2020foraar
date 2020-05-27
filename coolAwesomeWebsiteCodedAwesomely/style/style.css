@@ -1,15 +1,14 @@
 @font-face {
-  font-family: 'Alcefun';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Alcefun'), url('font/proxima_ssv/ChelseaMarket-Regular.ttf') format('ttf');
+
+  font-family: best_font;
+  src: url("font/Alcefun.woff");
 }
 
 * {
   outline: none;
   padding: 0;
   margin: 0;
-  font-family: 'Alcefun';
+  font-family: best_font;
 }
 
 body {
@@ -200,7 +199,7 @@ section.swiper-button-next, section.swiper-button-prev {
 .chat-answer-select {
   height: 7vh;
   width: 80%;
-  background-color: #93DEFE;
+  background-color: #A835AD;
   border-radius: 20px;
   padding: 15px;
   color: black;
@@ -214,7 +213,10 @@ display: block;
 }
 
 .chat-answer{
-  padding-bottom: 10px;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+
 }
 
 
