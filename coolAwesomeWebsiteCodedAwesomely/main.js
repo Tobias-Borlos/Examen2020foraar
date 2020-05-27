@@ -4,6 +4,9 @@ chat.addEventListener('click', function(){
     openChatBot()
 })
 
+function closeChatBot() {
+document.querySelector('.chatBot').style.display = 'none'
+}
 
 let burger = document.querySelector('.navbar--burgerIcon')
 burger.addEventListener('click', function(){
@@ -15,12 +18,14 @@ flight.addEventListener('click', function(){
     openFromTo()
 })
 
-
 function openChatBot(){
     document.querySelector('.chatBot').style.display = 'flex'
     document.querySelector('.chatBot').style.position = 'fixed'
     
-    document.querySelector('.navbar').style.bottom = '70vh'
+    let nav = document.querySelector('.navbar')
+    nav.classList.add("navbar__active");
+
+   /*  document.querySelector('.navbar').style.bottom = '70vh' */
 }
 
 
@@ -31,7 +36,9 @@ function openBurgerMenu(){
 function openFromTo(){
     document.querySelector('.holepage').style.display = 'block'
 
-    document.querySelector('.navbar').style.bottom = '70vh'
+    let nav = document.querySelector('.navbar')
+    nav.classList.add("navbar__active");
+
 }
 
 function closeMenu(){
@@ -41,7 +48,11 @@ function closeMenu(){
 function closeAll(){
     document.querySelector('.chatBot').style.display = 'none'
     document.querySelector('.holepage').style.display = 'none'
-    document.querySelector('.navbar').style.bottom = '0vh'
+    /* document.querySelector('.navbar').style.bottom = '0vh' */
+
+    let nav = document.querySelector('.navbar')
+    nav.classList.remove("navbar__active");
+    
     document.querySelector('.burgerMenu').style.display = 'none'
     console.log('close')
 }

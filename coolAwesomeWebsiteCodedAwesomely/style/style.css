@@ -1,7 +1,15 @@
+@font-face {
+  font-family: 'Alcefun';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Alcefun'), url('font/proxima_ssv/ChelseaMarket-Regular.ttf') format('ttf');
+}
+
 * {
   outline: none;
   padding: 0;
   margin: 0;
+  font-family: 'Alcefun';
 }
 
 body {
@@ -15,6 +23,17 @@ body {
   width: 100vw;
   height: 10vh;
   z-index: +2;
+}
+
+@keyframes navUp {
+  0% {bottom: 0vh}
+  100% {bottom: 70vh;}
+}
+
+.navbar__active {
+  animation-name: navUp;
+  animation-duration: .6s;
+  animation-fill-mode: forwards;
 }
 
 .navbar--svg {
@@ -106,7 +125,15 @@ section.swiper-button-next, section.swiper-button-prev {
   align-items: center;
 }
 
+@keyframes from {
+  0% {bottom: -300px;}
+  100% {bottom: 0;}
+}
+
 .chatBot {
+  animation-name: from;
+  animation-duration: .6s;
+  animation-fill-mode: forwards;
   position: absolute;
   bottom: 0vh;
   height: 70vh;
@@ -182,7 +209,15 @@ section.swiper-button-next, section.swiper-button-prev {
   background-color: #93DEFE;
 }
 
+@keyframes menu {
+  0% {left: -300px;}
+  100% {left: 0;}
+}
+
 .burgerMenu {
+  animation-name: menu;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
   display: none;
   position: absolute;
   bottom: 8vh;
@@ -191,7 +226,7 @@ section.swiper-button-next, section.swiper-button-prev {
   border-bottom: none;
   border-left: none;
   background-color: white;
-  font-size: 28px;
+  font-size: 26px;
 }
 
 .burgerMenu--list {
@@ -312,7 +347,19 @@ section.swiper-button-next, section.swiper-button-prev {
   width: 177px;
 }
 
+#HowMany option:active {
+  color: pink;
+}
+
+@keyframes from {
+  0% {bottom: -300px;}
+  100% {bottom: 0;}
+}
+
 .holepage {
+  animation-name: from;
+  animation-duration: .7s;
+  animation-fill-mode: forwards;
   display: none;
   position: fixed;
   bottom: 0;
@@ -320,7 +367,12 @@ section.swiper-button-next, section.swiper-button-prev {
   width: 100vw;
   padding-top: 10px;
   background-color: white;
+  overflow-y: auto;
 }
+
+
+
+
 
 /* Datepicker */
 .datepicker {
@@ -371,5 +423,6 @@ margin-left: 10px;
   border-radius: 25px;
   margin: 0 auto;
   font-size: 20px;
+  margin-bottom: 10%;
 }
 /*# sourceMappingURL=style.css.map */

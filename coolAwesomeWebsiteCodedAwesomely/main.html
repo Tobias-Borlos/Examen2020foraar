@@ -64,7 +64,7 @@
         <button class="navbar--burgerIcon"><i class="fas fa-bars"></i></button>
         <svg class="navbar--flyWrap" width="56" height="55" viewBox="0 0 56 55" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
-            <g id="navbar--flyIcon">
+            <g id="navbar--flyIcon" onclick="closeChatBot()">
             <rect id="Rectangle 16" x="-6.10352e-05" width="55.1866" height="54.3908" rx="27.1954" fill="#A835AD"/>
             <g id="PlaneUp">
             <rect id="from" x="10" y="13" width="35.0223" height="29.2874" fill="url(#pattern0)"/>
@@ -114,7 +114,7 @@
 <!-- burger Menu -->
 <section class="burgerMenu">
 <ul class="burgerMenu--list">
-    <li onclick="openFromTo(), closeMenu()">From/too</li>
+    <li onclick="openFromTo(), closeMenu()">Flights <img src="images/planeUp.png" alt="plane pointing up"></li>
     <li onclick="openChatBot(), closeMenu()" >Contact</li>
     <li>Settings</li>
 </ul>
