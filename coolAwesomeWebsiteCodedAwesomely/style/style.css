@@ -17,18 +17,17 @@ body {
 }
 
 @keyframes logoShow {
-  0% {left: -100px; width: 100px; opacity: 0%;}
-  100% {left: 0; width: 10vh; opacity: 50%;}
+  0% {left: -100px; width: 20vh; opacity: 0%;}
+  100% {left: 0; width: 10vh; opacity: 0.5;}
 }
 
 .logo {
-  animation-name: logoShow;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  animation: logoShow 1s forwards; 
   width: 10vh; 
   position: fixed;
   z-index: +2;
-  margin: 10px;
+  margin: 1%;
+  opacity: 0.5;
 }
 
 .navbar {
