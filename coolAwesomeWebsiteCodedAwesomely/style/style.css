@@ -255,7 +255,7 @@ display: block;
   width: 39%;
   border-bottom: none;
   border-left: none;
-  background-color: white;
+  background-color: #A835AD;
   font-size: 26px;
   z-index: 100;
   color: white;
@@ -279,7 +279,7 @@ display: block;
           flex-direction: column;
   justify-content: space-evenly;
   margin-top: 25%;
-  background-color: #a62998;
+  text-align: center;
 }
 
 .burgerMenu--list li {
