@@ -34,6 +34,9 @@ function openFromTo(){
     document.querySelector('.navbar').style.bottom = '70vh'
 }
 
+function closeMenu(){
+  document.querySelector('.burgerMenu').style.display = 'none'
+}
 
 function closeAll(){
     document.querySelector('.chatBot').style.display = 'none'
@@ -82,10 +85,10 @@ function dropDownMenu2() {
     menu2.style.display = "block"
 }
 
-function writeInput() {
+/* function writeInput() {
     let input = document.querySelector(".text")
     input.textContent += "This just got added";
-}
+} */
 
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
@@ -201,9 +204,9 @@ function autocomplete(inp, arr) {
 
   /* swaps the from input value to to input value */
   function swapValues(){
-    var tmp = document.querySelector(".from").value;
+    let from = document.querySelector(".from").value;
     document.querySelector(".from").value = document.querySelector(".to").value;
-    document.querySelector(".to").value = tmp;
+    document.querySelector(".to").value = from;
     }
 
     function showSearch() {

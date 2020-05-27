@@ -45,15 +45,24 @@ body {
   top: 100px;
 }
 
-.navbar--burgerIcon {
-  font-size: 2em;
+#image0 {
+  opacity: 50%;
 }
 
-.navbar--icon {
-  height: 25px;
-  width: 25px;
-  background-color: blue;
-  border-radius: 100%;
+.navbar--burgerIcon {
+  font-size: 2em;
+  background-color: white;
+    border: none;
+}
+
+.fas {
+  color: #A835AD;
+  width: 45px;
+}
+
+.navbar--icon img{
+  height: 45px;
+  width: 45px;
 }
 
 section.swiper-button-next, section.swiper-button-prev {
@@ -176,13 +185,13 @@ section.swiper-button-next, section.swiper-button-prev {
 .burgerMenu {
   display: none;
   position: absolute;
-  bottom: 10vh;
-  height: 70vh;
-  width: 30%;
-  border: solid black 1px;
+  bottom: 8vh;
+  height: 92vh;
+  width: 39%;
   border-bottom: none;
   border-left: none;
   background-color: white;
+  font-size: 28px;
 }
 
 .burgerMenu--list {
@@ -203,6 +212,9 @@ section.swiper-button-next, section.swiper-button-prev {
   justify-content: space-evenly;
 }
 
+.burgerMenu--list li {
+  list-style-type: none;
+}
 .fromToPage__from, .fromToPage__to, .fromToPage__date__outbound, .fromToPage__date__return {
   display: -ms-grid;
   display: grid;
@@ -351,11 +363,13 @@ margin-left: 10px;
 
 .search__searchButton {
   display: block;
-  background-color: #93DEFE;
+  background-color: #A835AD;
+  color: white;
   border: none;
   width: 220px;
   height: 62px;
   border-radius: 25px;
   margin: 0 auto;
+  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */
