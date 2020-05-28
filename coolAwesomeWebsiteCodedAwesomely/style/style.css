@@ -29,7 +29,13 @@ body {
   opacity: 0.5;
 }
 
+@keyframes navbarSlider {
+  0% {bottom: -100px;}
+  100% {bottom: 0;}
+}
+
 .navbar {
+  animation: navbarSlider 2s forwards; 
   position: fixed;
   bottom: 0;
   left: 0;
