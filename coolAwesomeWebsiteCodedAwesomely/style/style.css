@@ -221,7 +221,6 @@ display: block;
 
 
 .chatBot--messegesWrapper {
-  border: solid 1px black;
   margin: 10px;
   height: 5vh;
   display: -webkit-box;
@@ -232,6 +231,12 @@ display: block;
   bottom: 0;
 }
 
+.chatBot--messegesWrapper input {
+  font-size: 23px;
+  border: solid #A835AD 1px;
+}
+
+
 .chatBot--messegesBar {
   width: 90%;
 }
@@ -239,7 +244,12 @@ display: block;
 .chatBot--sendButton {
   width: 10%;
   height: 100%;
-  background-color: #93DEFE;
+  border: none; 
+  background-color: white;
+}
+
+.chatBot--sendButton img {
+  width: 90%;
 }
 
 @keyframes menu {
