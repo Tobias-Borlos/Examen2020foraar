@@ -235,6 +235,8 @@ display: block;
   padding: 5px;
   position: relative;
   bottom: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .chatBot--messegesWrapper input {
@@ -244,7 +246,7 @@ display: block;
 
 
 .chatBot--messegesBar {
-  width: 90%;
+  width: 85%;
 }
 
 .chatBot--sendButton {
@@ -271,7 +273,7 @@ display: block;
   position: absolute;
   bottom: 8vh;
   height: 92vh;
-  width: 39%;
+  width: 35%;
   border-bottom: none;
   border-left: none;
   background-color: #A835AD;

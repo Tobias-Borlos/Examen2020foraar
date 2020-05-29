@@ -7,11 +7,15 @@ chatBot.addEventListener('click', function(){
 
 function closeChatBot() {
 document.querySelector('.chatBot').style.display = 'none'
+
+document.querySelector('.navbar--icon :first-child').src = "images/chat.svg"
 }
 
 let burger = document.querySelector('.navbar--burgerIcon')
 burger.addEventListener('click', function(){
-    openBurgerMenu()
+  closeAll()  
+  openBurgerMenu()
+    
 })
 
 let flight = document.querySelector('#navbar--flyIcon')
@@ -24,6 +28,7 @@ flight.addEventListener('click', function(){
 function openChatBot(){
     document.querySelector('.chatBot').style.display = 'flex'
     document.querySelector('.chatBot').style.position = 'fixed'
+    document.querySelector('.navbar--icon :first-child').src = getRandomImg().image
     
     let nav = document.querySelector('.navbar')
     nav.classList.add("navbar__active");
@@ -56,6 +61,8 @@ function closeAll(){
     document.querySelector('.chatBot').style.display = 'none'
     document.querySelector('.holepage').style.display = 'none'
     document.querySelector('.body--mask').style.display = 'none'
+
+document.querySelector('.navbar--icon :first-child').src = "images/chat.svg"
 
     document.querySelector('.logo').style.display = "block"
     /* document.querySelector('.navbar').style.bottom = '0vh' */
@@ -237,3 +244,22 @@ function autocomplete(inp, arr) {
         let searchButton = document.querySelector(".search")
         searchButton.style.display = "block"
     }
+
+
+
+
+
+
+var imagesArray = [
+    {image: 'images/female1-small.jpg'},
+    {image: 'images/female2-small.jpg'},
+    {image: 'images/male1-small.jpg'},
+    {image: 'images/male2-small.jpg'},
+    {image: 'images/male3-small.jpg'},
+
+];
+
+
+function getRandomImg(){
+  return imagesArray[Math.floor(Math.random() * imagesArray.length)]
+}
