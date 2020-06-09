@@ -1,0 +1,10 @@
+ {
+    "BuyPlaneTicket": "<p>you can buy plane tickets on the Flight page</p>",
+    "WelcomeMessege": "<p>Hey im Michael the chat bot, nice to meet you</p>",
+    "Option1": "If you would like to talk to a human click <a onclick='realPerson()' class='ChatText' href='#'>Here</a>, <br> or ask me a question",
+    "Hey": "Hey",
+    "How": "How are you doing, what can i help you with",
+    "Thanks": "You're very welcome, have a nice day"
+
+
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/movingText.css">
     <link rel="shortcut icon" href="images/wowLogo2_test.png">
+    <link rel="stylesheet" href="style/three-dots.css">
     <script src="https://kit.fontawesome.com/0eb1370423.js" crossorigin="anonymous"></script>
     <!-- <a href="https://github.com/andreaspabst/js-chat-bot/wiki"></a> -->
     <script
@@ -105,14 +106,15 @@
   </section>
 
         <!-- chat bot page -->
-<section class="chatBot">
-    <section id="chat"></section>
-
-    <section class="chatBot--messegesWrapper">
-    <input type="text" name="chat" class="chatBot--messegesBar">
-    <button class="chatBot--sendButton"><img src="images/send.png" alt="send icon"></button>
-</section>
-</section>
+        <section class="chatBot">
+            <section class="chatBot--convoWrapper"></section>
+            <section class="chatBot--messegesWrapper">
+            <input type="text" value="" name="chat" class="chatBot--messegesBar" onkeypress="if(event.keyCode == 13){talk()}">
+                <i class="fas fa-plane" onclick="talk()"></i>
+            </section>
+        </section>
+    
+    
 
 
 

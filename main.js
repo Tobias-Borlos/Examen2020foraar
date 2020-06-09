@@ -1,7 +1,7 @@
 let chatBot = document.querySelector('.navbar--icon')
 
 chatBot.addEventListener('click', function(){
-  closeAll()
+ 
     openChatBot()
 })
 
@@ -26,12 +26,25 @@ flight.addEventListener('click', function(){
 })
 
 function openChatBot(){
-    document.querySelector('.chatBot').style.display = 'flex'
-    document.querySelector('.chatBot').style.position = 'fixed'
-    document.querySelector('.navbar--icon :first-child').src = getRandomImg().image
-    
+
+  let chatbot = document.querySelector('.chatBot')
+  if(chatbot.style.display !== 'block'){
+  chatbot.style.display = 'block'
+  document.querySelector('.chatBot').style.position = 'fixed'
+  let nav = document.querySelector('.navbar')
+  nav.classList.add("navbar__active");
+  WelcomeMessege()
+  }
+  else{
+    chatbot.style.display = 'none'
     let nav = document.querySelector('.navbar')
-    nav.classList.add("navbar__active");
+    nav.classList.remove("navbar__active");
+    clearChatHistory()
+
+document.querySelector('.navbar--icon :first-child').src = "images/chat.svg"
+  }
+  
+ 
 
    /*  document.querySelector('.navbar').style.bottom = '70vh' */
 }
@@ -58,7 +71,8 @@ function closeMenu(){
 }
 
 function closeAll(){
-    document.querySelector('.chatBot').style.display = 'none'
+    let chatbot = document.querySelector('.chatBot')
+    chatbot.style.display = 'none'
     document.querySelector('.holepage').style.display = 'none'
     document.querySelector('.body--mask').style.display = 'none'
 
@@ -72,6 +86,23 @@ document.querySelector('.navbar--icon :first-child').src = "images/chat.svg"
     
     document.querySelector('.burgerMenu').style.display = 'none'
     console.log('close')
+
+    clearChatHistory()
+
+
+}
+
+
+function clearChatHistory(){
+let history = document.querySelector('.chatBot--convoWrapper')
+let parent = document.querySelector('.chatBot')
+console.log(history)
+parent.removeChild(history)
+
+let convo = document.createElement('section')
+convo.classList.add('chatBot--convoWrapper')
+parent.appendChild(convo)
+
 }
 
 /* window.addEventListener('resize', function(){
@@ -262,4 +293,11 @@ var imagesArray = [
 
 function getRandomImg(){
   return imagesArray[Math.floor(Math.random() * imagesArray.length)]
+}
+
+
+function realPerson(){
+    
+
+document.querySelector('.navbar--icon :first-child').src = getRandomImg().image
 }
