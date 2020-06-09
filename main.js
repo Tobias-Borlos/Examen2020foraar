@@ -26,7 +26,7 @@ flight.addEventListener('click', function(){
 })
 
 function openChatBot(){
-
+  closeAll()
   let chatbot = document.querySelector('.chatBot')
   if(chatbot.style.display !== 'block'){
   chatbot.style.display = 'block'
@@ -34,6 +34,7 @@ function openChatBot(){
   let nav = document.querySelector('.navbar')
   nav.classList.add("navbar__active");
   WelcomeMessege()
+  console.log('kasjasjsjsjasjasjoasojasoj')
   }
   else{
     chatbot.style.display = 'none'
