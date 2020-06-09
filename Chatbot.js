@@ -1,6 +1,6 @@
 
 function WelcomeMessege(){
-fetch('textJsonData.JSON').then(
+fetch('Examen2020foraar/textJsonData.json').then(
     response => response.json()).then(function (data){
         answer(data.WelcomeMessege)
         setTimeout(function(){answer(data.Option1)},2400)
